@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Buttons : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+    public void StartButton() {
+        SceneManager.LoadSceneAsync("Level_01");
+    }
+
+    public void RestartLevel() {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+    }
+    
+    public void ReturnToStart() {
+        SceneManager.LoadSceneAsync("StartMenu");
+    }
+
+    public void GoToAboutPage() {
+        SceneManager.LoadSceneAsync("AboutPage");
+    }
+
+}
